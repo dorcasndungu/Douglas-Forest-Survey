@@ -1,0 +1,48 @@
+{{#partial "content"}}
+
+    <div  style="background-image: url(' https://images.unsplash.com/photo-1549366021-9f761d450615?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=406&q=80'); ">
+        <div class="container">
+            <div class="col-md-4 justify-content-center">
+                <form action="/animal" method="post">
+                    <p class="h2 text-center text-light mb-4">Record animal</p>
+                    <input type="text" id="name" name="name" class="form-control mb-4" placeholder="Animal Name" required>
+                    <label for="rangerId" class="text-success">Ranger Name:</label>
+                    <select name="rangerId" class="form-control mb-4" id="rangerId" required>
+                        {{#each rangers}}
+                            <option  value="{{id}}">{{rangerName}}</option>
+                        {{/each}}
+                    </select>
+                    <p class="text-success">Can't see your name? <a href="/ranger/new" class="text-decoration-none text-light">Register now!</a></p>
+                    <input list="age-list"type="text" id="age" name="age" class="form-control mb-4" placeholder="Age eg:young" required>
+                    <datalist id="age-list">
+                        <option>NewBorn</option>
+                        <option>Young</option>
+                        <option>Adult</option>
+                    </datalist>
+                    <input list="location-list"type="text" id="location" name="location" class="form-control mb-4" placeholder="Please choose below" required>
+                    <datalist id="location-list">
+                        <option>Kisima</option>
+                        <option>Mlima</option>
+                        <option>Msituni</option>
+                        <option>Mawe</option>
+                    </datalist>
+                    <input list="health-list" type="text"  id="health" name="health" class="form-control mb-4" placeholder="Please choose below" required>
+                    <datalist id="health-list">
+                        <option>Healthy</option>
+                        <option>Okay</option>
+                        <option>Ill</option>
+                    </datalist>
+                    <input list="dangerStatus-list" type="text" id="dangerStatus" name="dangerStatus" class="form-control mb-4" placeholder="Please choose below" required>
+                    <datalist id="dangerStatus-list">
+                        <option>Endangered</option>
+                        <option>Not Endangered</option>
+                    </datalist>
+
+                    <button class="btn btn-success justify-content-center" type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+
+{{/partial}}
+</div>
+{{> layout.hbs}}

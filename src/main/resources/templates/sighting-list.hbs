@@ -1,0 +1,32 @@
+{{#partial "styles"}}
+    <link rel='stylesheet' href='/css/styles.css'>
+{{/partial}}
+{{#partial "content"}}
+<div class="container" style="font-family: 'Amatic SC', cursive;">
+<h1 class="text-success text-center my-2" style="font-family: 'Playfair Display SC', serif;" >Sightings <br><small>This is a summary of the recorded forest animals since the beginning of the survey.</small></h1>
+<div class="">
+{{#each animals}}
+    <div class="card mb-3 col-md-4" style="width: 18rem;">
+        <img src="https://images.unsplash.com/photo-1555492217-7bb078f32c8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB" class="card-img-top" alt="animal photo">
+                <div class="card-body">
+                    <h5 class="card-title">{{name}}</h5>
+                   <p>Spotted at  <span class="text-success">{{location}}...</span><span class="text-success">{{formattedTimeString}}</span></p>
+                    <div class="d-flex justify-content-center gap-1 mb-2">
+                        <a href="#" class="btn btn-info">{{age}}</a>
+                        <a href="#" class="btn btn-danger text-light"> {{health}}</a>
+                        <a href="#" class="btn btn-primary text-light">{{dangerStatus}}</a>
+                    </div>
+        </div>
+    </div>
+
+{{/each}}
+    <h3 class="text-warning text-center border-warning border-bottom">Recorded by:</h3>
+                {{#each rangers}}
+                    <h5 ><span class="text-light fw-2 p-3 mx-4">{{rangerName}}</span></h5>
+                {{/each}}
+            </div>
+</div>
+
+
+{{/partial}}
+{{>layout.hbs}}

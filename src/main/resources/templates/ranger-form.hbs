@@ -1,0 +1,31 @@
+{{#partial "content"}}
+<!--    <div  style="background-image: url('https://images.unsplash.com/photo-1555492217-7bb078f32c8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB'); background-size: cover;">-->
+        <div class="container">
+            <div class="row pt-5 text-success"  style="font-family: 'Playfair Display SC', serif;">
+
+                <div class="col-md-4 justify-content-center mt-5">
+                    <form action="/ranger" method="post">
+                        <h1 class="text-success text-center">Ranger Registration</h1>
+                        <div class="form-group mb-4">
+                            <label for="rangerName" class="fs-4 mb-2">Name:</label>
+                            <input type="text" class="form-control" id="rangerName" name="rangerName" required>
+                        </div>
+                        <div class="form-group mb-4">
+                            <label for="kwsPin" class="fs-4 mb-2">KWS pin</label>
+                            <input type="password" class="form-control" id="kwsPin" name="kwsPin" required>
+                        </div>
+
+                        <button class="btn btn-success d-block mx-auto" type="submit">Register</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+
+
+{{/partial}}
+
+</div>
+
+{{>layout.hbs}}
