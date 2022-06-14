@@ -1,7 +1,7 @@
 #  Douglas Fir Forest Survey
 
 ## Description
-This is an application that stores data given by users in a database and retrieves it by the use of Spark REST routing and SQL queries.
+This is an application that stores data given by game wardens in a database and displays it using handlebars. It uses Spark REST routing and SQL queries.
 ## Technologies used
 - Postgresql
 - SparkJava
